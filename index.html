@@ -8,14 +8,32 @@
 </head>
 <body>
   <div id="app">
+    <!-- Home Screen -->
     <div id="home-screen" class="screen">
       <h1>How to extract contact visualizer</h1>
       <button id="request-permission-btn" class="button">Show Contacts</button>
     </div>
+
+    <!-- Contacts List Screen -->
     <div id="contacts-list-screen" class="screen hidden">
       <h1>Contacts</h1>
+      <input type="text" id="search-input" placeholder="Search contacts..." class="input">
+      <select id="sort-options" class="input">
+        <option value="name-asc">Sort by Name (A-Z)</option>
+        <option value="name-desc">Sort by Name (Z-A)</option>
+      </select>
+      <label>
+        <input type="checkbox" id="filter-has-phone" class="input-checkbox"> Only show contacts with phone numbers
+      </label>
       <div id="contacts-list"></div>
       <button id="back-btn" class="button">Go Back</button>
+    </div>
+
+    <!-- Contact Details Screen -->
+    <div id="contact-details-screen" class="screen hidden">
+      <h1>Contact Details</h1>
+      <div id="contact-details"></div>
+      <button id="back-to-contacts-btn" class="button">Back to Contacts</button>
     </div>
   </div>
 
